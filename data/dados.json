@@ -1,0 +1,12 @@
+[
+    {"text": "Lave as mãos", "id": 0},
+    {"text": "Use álcool em gel quando não puder lavar as mãos", "id": 1},
+    {"text": "Cubra o rosto com o braço ao espirrar ou tossir", "id": 2},
+    {"text": "Mantenha os ambientes bem ventilados", "id": 3},
+    {"text": "Evite tocar o rosto, especialmente os olhos, nariz e boca", "id": 4},
+    {"text": "Higienize os objetos de uso pessoal frequentemente", "id": 5},
+    {"text": "Troque a máscara a cada 4 horas ou quando estiver úmida", "id": 6},
+    {"text": "Lave frutas e verduras antes de consumir", "id": 7},
+    {"text": "Evite compartilhar objetos de uso pessoal, como copos e talheres", "id": 8},
+    {"text": "Tome banho diariamente e troque de roupa limpa", "id": 9}
+]

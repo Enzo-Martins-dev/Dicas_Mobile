@@ -1,6 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
 import { View, Text, Button, StyleSheet} from "react-native";
 
+/*const Item = ({text}) => (
+  <View>
+    <Text> {text} </Text>
+  </View>
+);*/
+
 function HistoricoDicasScreen( {navigation} ) {
     return (
         <View>
