@@ -5,9 +5,10 @@ import { FavoritosContext } from '../context/ContextFavoritos';
 import { Calendar }  from 'react-native-calendars';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const Lista_dicas = require('../data/dados.json')
+const Lista_dicas = require('../data/dados.json') 
+/**Obtendo os dados em dados.json, estão sendo armazenados em Lista_dicas */
 
-function getDica(Lista_dicas) {
+function getDica(Lista_dicas) { 
   const Dica = Lista_dicas[Math.floor(Math.random() * Lista_dicas.length)]
   return Dica
 }
@@ -52,7 +53,9 @@ function HomeScreen( {navigation} ) {
     
       } else if (!elemento_presente) {
         lista_dicas_favoritadas.push(dica)
-        setFavoritos([...lista_dicas_favoritadas])
+        setFavoritos([...lista_dicas_favoritadas]) /**Atualiza o valor de favoritos de acordo com a inserção de elementos na lista, usando uma
+        cópia dela. A lógica da remoção na função abaixo é a mesma. Eu dividi em duas funções pra manter o princípio de uma função fazer apenas
+        uma coisa.*/
         Alert.alert("Dica adicionada aos favoritos")
       }
     }
@@ -98,6 +101,12 @@ function BuscaLinear(elemento, lista) {
       alignItems: 'center',
       justifyContent: 'center',
     },
+    texto_principal: {
+      flex: 1,
+      backgroundColor: '#fff',
+      alignItems: 'center',
+      //justifyContent: 'center',
+    }
   });
 
 

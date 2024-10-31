@@ -30,7 +30,6 @@ function DicasFavoritasScreen({ navigation }) {
       </View>
     );
   }
-  /**Com o UseEffect antes de implementar a ContextAPI, a exibição lista não atualizava direito, principalmente a remoção dos elementos da tela */
 
 export default DicasFavoritasScreen;
 
