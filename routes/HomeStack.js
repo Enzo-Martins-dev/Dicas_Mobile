@@ -1,11 +1,15 @@
 import 'react-native-gesture-handler';
 import React from 'react';
+import { Image } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { NavigationContainer } from '@react-navigation/native';
 import HomeScreen from '../screens/HomeScreen';
 import DicasFavoritasScreen from '../screens/FavoritesScreen';
 import HistoricoDicasScreen from '../screens/HistoryScreen';
+import tab_home_page from '../assets/tab_home_page.png';
+import tab_favorites_page from '../assets/tab_favorites_page.png'
+import tab_historic_page from '../assets/tab_historic_page.png'
 
 const Tab = createBottomTabNavigator();
 
@@ -13,9 +17,47 @@ function MyStack() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Favoritos" component={DicasFavoritasScreen} />
-        <Tab.Screen name="Historico" component={HistoricoDicasScreen}/>
+        <Tab.Screen 
+          name="Home" 
+          component={HomeScreen}
+          options={{
+            title: "Início", 
+            tabBarIcon: ({focused}) => {
+              return (
+                <Image 
+                  source={focused ? tab_home_page : tab_home_page}
+                  style={{ width: 24, height: 24 }}
+                />
+              )
+          }}}/>
+        <Tab.Screen 
+          name="Favoritos" 
+          component={DicasFavoritasScreen} 
+          options={{
+            title:'Favoritos',
+            tabBarIcon: ({focused}) => {
+              return (
+                <Image
+                  source={tab_favorites_page}
+                  style={{ width: 24, height: 24 }}
+                />
+              )
+            }
+            }}/>
+        <Tab.Screen 
+          name="Historico" 
+          component={HistoricoDicasScreen}
+          options={{
+            title: 'Historico',
+            tabBarIcon: ({focused}) => {
+              return (
+                <Image
+                  source={tab_historic_page}
+                  style={{ width: 24, height: 24 }}
+                />
+              )
+            }
+            }}/>
       </Tab.Navigator>
     </NavigationContainer>
   );

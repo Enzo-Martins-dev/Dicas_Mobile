@@ -1,25 +1,30 @@
 import 'react-native-gesture-handler';
 import React, {useState, useContext} from 'react';
-//import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, StyleSheet, FlatList, View, Text} from 'react-native';
-//import { NavigationContainer } from '@react-navigation/native';
-//import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-//import Navigator from './routes/HomeStack'; 
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import MyStack from './routes/HomeStack'
 import { FavoritosContext } from './context/ContextFavoritos';
+import { HistoricoContext } from './context/ContextHistorico';
 
 function App() {
-  const [favoritos, setFavoritos] = useState([]);
+  const [favoritos, setFavoritos] = useState([])
+  const [historico, setHistorico] = useState([])
 
   return (
     <GestureHandlerRootView>
-      <FavoritosContext.Provider value={{ favoritos, setFavoritos }}>
-        <MyStack/> 
+
+      <FavoritosContext.Provider value={{favoritos, setFavoritos}}> 
+        <HistoricoContext.Provider value={{historico, setHistorico}}>
+
+          <MyStack/>
+
+        </HistoricoContext.Provider>
       </FavoritosContext.Provider>
+
     </GestureHandlerRootView>
-  );
-}
+  ); /*favoritos e historico vão poder ser acessados e modificados por todas as telas e demais estruturas dentro dos Providers (no caso, 
+     MyStack, que possui todas as telas).*/
+} 
 
 const styles = StyleSheet.create({
   container: {

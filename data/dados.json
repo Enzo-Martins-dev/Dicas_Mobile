@@ -1,12 +1,11 @@
 [
-    {"text": "Lave as mãos", "id": 0},
-    {"text": "Use álcool em gel quando não puder lavar as mãos", "id": 1},
-    {"text": "Cubra o rosto com o braço ao espirrar ou tossir", "id": 2},
-    {"text": "Mantenha os ambientes bem ventilados", "id": 3},
-    {"text": "Evite tocar o rosto, especialmente os olhos, nariz e boca", "id": 4},
-    {"text": "Higienize os objetos de uso pessoal frequentemente", "id": 5},
-    {"text": "Troque a máscara a cada 4 horas ou quando estiver úmida", "id": 6},
-    {"text": "Lave frutas e verduras antes de consumir", "id": 7},
-    {"text": "Evite compartilhar objetos de uso pessoal, como copos e talheres", "id": 8},
-    {"text": "Tome banho diariamente e troque de roupa limpa", "id": 9}
+    {"text": "Reduza o uso de plásticos descartáveis", "id": 0},
+    {"text": "Recicle papel, vidro e plástico sempre que possível", "id": 1},
+    {"text": "Opte por produtos com menos embalagens", "id": 2},
+    {"text": "Compre de produtores locais para apoiar a economia da sua região", "id": 3},
+    {"text": "Economize água fechando a torneira ao escovar os dentes", "id": 4},
+    {"text": "Use transporte público, bicicleta ou caminhe para reduzir a emissão de carbono", "id": 5},
+    {"text": "Plante árvores e crie um espaço verde em casa", "id": 6},
+    {"text": "Descarte corretamente resíduos eletrônicos", "id": 7},
+    {"text": "Utilize lâmpadas LED para economizar energia", "id": 8}
 ]
