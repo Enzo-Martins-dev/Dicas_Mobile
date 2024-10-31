@@ -9,7 +9,7 @@ import HistoricoDicasScreen from '../screens/HistoryScreen';
 
 const Tab = createBottomTabNavigator();
 
-const MyStack = () => {
+function MyStack() {
   return (
     <NavigationContainer>
       <Tab.Navigator>
@@ -20,6 +20,12 @@ const MyStack = () => {
     </NavigationContainer>
   );
 };
+
+/*
+  Aqui foi criado a Stack (Pilha), que é usada para comandar as alterações de telas através da inserção/remoção destas na pilha.
+  Os elementos foram criado como parte de uma tab (Tab.Screen dentro de um Tab.Navigator), logo são representados como elementos dentro de uma
+  tab, na parte de baixo da tela, já que Tab é um 'BottomTabNavigator'.
+*/
 
 export default MyStack; 
 

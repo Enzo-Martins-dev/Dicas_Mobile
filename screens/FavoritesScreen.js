@@ -1,9 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { View, Text, Button, StyleSheet} from "react-native";
-import getFavoritos from './HomeScreen'
-//import {lista_dicas_favoritadas} from './HomeScreen'
+import { getFavoritos } from './HomeScreen' 
 import { FlatList } from 'react-native-gesture-handler';
 import { useEffect, useState } from 'react';
+import { lista_dicas_favoritadas } from './HomeScreen';
 
 const Item = ({text}) => {
     return(
@@ -13,7 +13,7 @@ const Item = ({text}) => {
     )
 }
 
-let lista_dicas_favoritadas = getFavoritos()
+//let lista_dicas_favoritadas = getFavoritos()
 
 //<Text> {lista_dicas_favoritadas[0]?.text} </Text>
 
@@ -21,8 +21,8 @@ function DicasFavoritasScreen( {navigation} ) {
     const [favoritos, setFavoritos] = useState([])
 
     useEffect (() => {
-        setFavoritos(lista_dicas_favoritadas) //Isso acontece
-    }, [lista_dicas_favoritadas]) //Toda vez que isso mudar (continuação acima)
+        setFavoritos(lista_dicas_favoritadas) 
+    }, [lista_dicas_favoritadas]) 
 
     return (
         <View>
