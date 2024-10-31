@@ -1,7 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import { useEffect, useState, useContext } from 'react';
 import { View, Text, Button, StyleSheet, Alert } from "react-native";
-import { FlatList } from 'react-native-gesture-handler';
+import { FavoritosContext } from '../context/ContextFavoritos';
+import { Calendar }  from 'react-native-calendars';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Lista_dicas = require('../data/dados.json')
 
@@ -10,12 +12,16 @@ function getDica(Lista_dicas) {
   return Dica
 }
 
+/**
+ * Preciso de um calendário que me deixe alterar a data e associar a função getDica() às datas.
+ */
+
 let lista_dicas_favoritadas = []
 
 function HomeScreen( {navigation} ) {
     const [dica, setDica] = useState('')
     const [data, setData] = useState(new Date())
-    const [favoritos, setFavoritos] = useState([])
+    const { favoritos, setFavoritos } = useContext(FavoritosContext);
 
     useEffect( () => {
       setDica(getDica(Lista_dicas))

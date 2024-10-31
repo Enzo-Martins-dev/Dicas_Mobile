@@ -1,5 +1,5 @@
 import 'react-native-gesture-handler';
-import React from 'react';
+import React, {useState, useContext} from 'react';
 //import { StatusBar } from 'expo-status-bar';
 import { SafeAreaView, StyleSheet, FlatList, View, Text} from 'react-native';
 //import { NavigationContainer } from '@react-navigation/native';
@@ -7,16 +7,19 @@ import { SafeAreaView, StyleSheet, FlatList, View, Text} from 'react-native';
 //import Navigator from './routes/HomeStack'; 
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import MyStack from './routes/HomeStack'
+import { FavoritosContext } from './context/ContextFavoritos';
 
-
-const App = () => {
+function App() {
+  const [favoritos, setFavoritos] = useState([]);
 
   return (
-      <GestureHandlerRootView>
-        <MyStack/>
-      </GestureHandlerRootView>
+    <GestureHandlerRootView>
+      <FavoritosContext.Provider value={{ favoritos, setFavoritos }}>
+        <MyStack/> 
+      </FavoritosContext.Provider>
+    </GestureHandlerRootView>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {

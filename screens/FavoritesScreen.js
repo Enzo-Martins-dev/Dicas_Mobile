@@ -2,8 +2,10 @@ import { StatusBar } from 'expo-status-bar';
 import { View, Text, Button, StyleSheet} from "react-native";
 import { getFavoritos } from './HomeScreen' 
 import { FlatList } from 'react-native-gesture-handler';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { lista_dicas_favoritadas } from './HomeScreen';
+import { FavoritosContext } from '../context/ContextFavoritos';
+
 
 const Item = ({text}) => {
     return(
@@ -13,28 +15,22 @@ const Item = ({text}) => {
     )
 }
 
-//let lista_dicas_favoritadas = getFavoritos()
 
-//<Text> {lista_dicas_favoritadas[0]?.text} </Text>
-
-function DicasFavoritasScreen( {navigation} ) {
-    const [favoritos, setFavoritos] = useState([])
-
-    useEffect (() => {
-        setFavoritos(lista_dicas_favoritadas) 
-    }, [lista_dicas_favoritadas]) 
-
+function DicasFavoritasScreen({ navigation }) {
+    const { favoritos } = useContext(FavoritosContext);
+  
     return (
-        <View>
-            <Text> Tela Dicas Favoritas </Text>
-            <FlatList
-                data={favoritos}
-                renderItem={({item}) => <Item text={item.text}/>}    
-                keyExtractor={item => item.id}
-            />
-        </View>
-    )
-}
+      <View>
+        <Text> Tela Dicas Favoritas </Text>
+        <FlatList
+          data={favoritos}
+          renderItem={({ item }) => <Item text={item.text} />}
+          keyExtractor={item => item.id.toString()}
+        />
+      </View>
+    );
+  }
+  /**Com o UseEffect antes de implementar a ContextAPI, a exibição lista não atualizava direito, principalmente a remoção dos elementos da tela */
 
 export default DicasFavoritasScreen;
 
