@@ -23,8 +23,9 @@ function App() {
 
     </GestureHandlerRootView>
   ); /*favoritos e historico vão poder ser acessados e modificados por todas as telas e demais estruturas dentro dos Providers (no caso, 
-     MyStack, que possui todas as telas).*/
+     MyStack, que possui todas as telas). */
 } 
+
 
 const styles = StyleSheet.create({
   container: {
