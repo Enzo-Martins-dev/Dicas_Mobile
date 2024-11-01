@@ -24,7 +24,6 @@ Enzo Martins: [https://github.com/Enzo-Martins-dev](https://github.com/Enzo-Mart
 * Expo: ferramenta baseada em React Native usada para simplificar o desenvolvimento e execução de aplicações Android/iOS.
 * JSON: tipo de arquivo usado para armazenar os dados (dicas).
 
-
-
-
-
+## Como Executar
+* De preferência, iniciar o emulador anteriormente
+* Dentro da pasta do projeto, usar o comando 'npx expo start'. Se necessário, usa-se os comandos 'npm install' e 'npm start' no lugar.
