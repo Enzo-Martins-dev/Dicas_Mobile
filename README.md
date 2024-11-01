@@ -19,11 +19,12 @@ Enzo Martins: [https://github.com/Enzo-Martins-dev](https://github.com/Enzo-Mart
 * Visualizar uma lista com as dicas favoritadas, em ordem de adição
 
 ## Tecnologias Utilizadas
-* JavaScript: linguagem de programação base.
-* React Native: framework JavaScript usado para desenvolver aplicativos mobile para Android/iOS.
-* Expo: ferramenta baseada em React Native usada para simplificar o desenvolvimento e execução de aplicações Android/iOS.
-* JSON: tipo de arquivo usado para armazenar os dados (dicas).
+* JavaScript: linguagem de programação base
+* React Native: framework JavaScript usado para desenvolver aplicativos mobile para Android/iOS
+* Node.JS: ambiente de execução JavaScript
+* Expo: ferramenta baseada em React Native usada para simplificar o desenvolvimento e execução de aplicações Android/iOS
+* JSON: tipo de arquivo usado para armazenar os dados (dicas)
 
 ## Como Executar
 * De preferência, iniciar o emulador anteriormente
-* Dentro da pasta do projeto, executar o comando 'npx expo start'. Se necessário, executam-se os comandos 'npm install' e 'npm start' no lugar.
+* Dentro da pasta do projeto, executar o comando 'npx expo start'. Se necessário, executam-se os comandos 'npm install' e 'npm start' no lugar
