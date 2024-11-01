@@ -1,5 +1,5 @@
 
-# Aplicativos Dicas Ecológicas
+# Aplicativo Dicas Ecológicas
 
 ## Objetivo
 Esse projeto visa aplicar conceitos básicos em/de React Native, que incluem:
