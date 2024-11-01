@@ -26,4 +26,4 @@ Enzo Martins: [https://github.com/Enzo-Martins-dev](https://github.com/Enzo-Mart
 
 ## Como Executar
 * De preferência, iniciar o emulador anteriormente
-* Dentro da pasta do projeto, usar o comando 'npx expo start'. Se necessário, usa-se os comandos 'npm install' e 'npm start' no lugar.
+* Dentro da pasta do projeto, executar o comando 'npx expo start'. Se necessário, executam-se os comandos 'npm install' e 'npm start' no lugar.
